@@ -28,7 +28,7 @@ import time
 # Specify the base path of the directory.
 base_path = "C:\\Users\\charl\\OneDrive\\Documents\\JVV\\"
 # Select an example case study application. Specify the name below:
-case_study = "Budapest"
+case_study = "Madrid"
 # Set the paths to directories containing data and (future) output.
 data_path = base_path + "EU_test_data\\"
 output_path = base_path + "EU_test_output\\" + case_study
@@ -147,7 +147,7 @@ rule_tracker = np.zeros(shape=(total_iterations, 5))
 # adjustments.
 levels = np.zeros(shape=(max_distance, luc, luc))
 # Set the maximum level for each rule
-max_level = 199
+max_level = 99
 # Track the start of the calibration.
 start = time.time()
 
@@ -178,10 +178,12 @@ while counter < total_iterations:
                     # Skip conversion points for feature classes.
                     # These have no impact on the model.
                     pass
-                # Skip if at max value.
-                elif levels[d, p + pas, q] > max_level:
+                # Skip if at max value and adjusting in wrong direction.
+                elif (levels[d, p + pas, q] > max_level
+                      and dev[d, p + pas, q] < 0):
                     pass
-                elif levels[d, p + pas, q] < (-1 * max_level):
+                elif (levels[d, p + pas, q] < (-1 * max_level)
+                      and dev[d, p + pas, q] > 0):
                     pass
                 else:
                     if abs(dev[d, p + pas, q]) > max_value:
@@ -228,8 +230,6 @@ while counter < total_iterations:
     # User feedback
     print "Iterations completed: " + str(counter)
 
-print levels
-
 # Track the end of the calibration.
 end = time.time()
 # Determine the duration of the calibration method.
@@ -237,8 +237,7 @@ duration = end - start
 duration_h = duration/3600
 
 # Record the duration of calibration.
-output_duration_file = ("C:\\Users\\charl\\OneDrive\\Documents\\JVV\\"
-                        "EU_test_output\\Budapest\\duration.txt")
+output_duration_file = output_path + "\\duration.txt"
 f = open(output_duration_file, "w")
 f.write(str(duration_h))
 f.close()

@@ -1,35 +1,35 @@
 from,to,y0,y1,y2,y3,y4
-Natural areas,Arable land,1,0,0,0,0
+Natural areas,Arable land,0,0,0,0,0
 Natural areas,Permanent crops,1,0,0,0,0
-Natural areas,Pastures,0,0,0,0,0
-Natural areas,Agricultural areas,0,0,0,0,0
-Natural areas,Residential,0,0,0,0,0
-Natural areas,Industry & commerce,0,0,0,0,0
-Natural areas,Recreation areas,0,0,0,0,0
-Natural areas,Forest,1,0,0,0,0
+Natural areas,Pastures,1,0,0,0,0
+Natural areas,Agricultural areas,1,0,0,0,0
+Natural areas,Residential,1,0,0,0,0
+Natural areas,Industry & commerce,1,0,0,0,0
+Natural areas,Recreation areas,1,0,0,0,0
+Natural areas,Forest,25,0,0,0,0
 Arable land,Arable land,100,0,0,0,0
 Arable land,Permanent crops,1,0,0,0,0
-Arable land,Pastures,1,0,0,0,0
+Arable land,Pastures,37,0,0,0,0
 Arable land,Agricultural areas,1,0,0,0,0
 Arable land,Residential,1,0,0,0,0
 Arable land,Industry & commerce,1,0,0,0,0
 Arable land,Recreation areas,1,0,0,0,0
 Arable land,Forest,1,0,0,0,0
-Permanent crops,Arable land,30,0,0,0,0
-Permanent crops,Permanent crops,100,5.899999999999995,1.0000000000000007,0.10000000000000007,0.009999999999999995
+Permanent crops,Arable land,1,0,0,0,0
+Permanent crops,Permanent crops,100,0,0,0,0
 Permanent crops,Pastures,1,0,0,0,0
 Permanent crops,Agricultural areas,1,0,0,0,0
 Permanent crops,Residential,1,0,0,0,0
 Permanent crops,Industry & commerce,1,0,0,0,0
-Permanent crops,Recreation areas,0,0,0,0,0
+Permanent crops,Recreation areas,1,0,0,0,0
 Permanent crops,Forest,1,0,0,0,0
-Pastures,Arable land,30,0,0,0,0
-Pastures,Permanent crops,1,0,0,0,0
-Pastures,Pastures,100,0,0,0,0
+Pastures,Arable land,1,0,0,0,0
+Pastures,Permanent crops,-99,-0.1,0,0,0
+Pastures,Pastures,100,0,1.0000000000000007,0.10000000000000007,0.009999999999999995
 Pastures,Agricultural areas,1,0,0,0,0
-Pastures,Residential,1,0,0,0,0
+Pastures,Residential,-99,-0.1,0,0,0
 Pastures,Industry & commerce,1,0,0,0,0
-Pastures,Recreation areas,1,0,0,0,0
+Pastures,Recreation areas,0,0,0,0,0
 Pastures,Forest,1,0,0,0,0
 Agricultural areas,Arable land,1,0,0,0,0
 Agricultural areas,Permanent crops,1,0,0,0,0
@@ -52,8 +52,8 @@ Industry & commerce,Permanent crops,1,0,0,0,0
 Industry & commerce,Pastures,1,0,0,0,0
 Industry & commerce,Agricultural areas,1,0,0,0,0
 Industry & commerce,Residential,1,0,0,0,0
-Industry & commerce,Industry & commerce,100,0.1,0,0,0
-Industry & commerce,Recreation areas,1,0,0,0,0
+Industry & commerce,Industry & commerce,100,0,0.03,0,0
+Industry & commerce,Recreation areas,33,0,0,0,0
 Industry & commerce,Forest,1,0,0,0,0
 Recreation areas,Arable land,1,0,0,0,0
 Recreation areas,Permanent crops,1,0,0,0,0
@@ -61,7 +61,7 @@ Recreation areas,Pastures,1,0,0,0,0
 Recreation areas,Agricultural areas,1,0,0,0,0
 Recreation areas,Residential,1,0,0,0,0
 Recreation areas,Industry & commerce,1,0,0,0,0
-Recreation areas,Recreation areas,100,0.1,0,0,0
+Recreation areas,Recreation areas,100,0,0,0,0
 Recreation areas,Forest,1,0,0,0,0
 Forest,Arable land,1,0,0,0,0
 Forest,Permanent crops,1,0,0,0,0
@@ -77,7 +77,7 @@ Road & rail,Pastures,1,0,0,0,0
 Road & rail,Agricultural areas,1,0,0,0,0
 Road & rail,Residential,1,0,0,0,0
 Road & rail,Industry & commerce,1,0,0,0,0
-Road & rail,Recreation areas,1,0,0,0,0
+Road & rail,Recreation areas,1,0.1,0,0.023000000000000013,0.009999999999999995
 Road & rail,Forest,1,0,0,0,0
 Seaports,Arable land,1,0,0,0,0
 Seaports,Permanent crops,1,0,0,0,0
@@ -85,10 +85,10 @@ Seaports,Pastures,1,0,0,0,0
 Seaports,Agricultural areas,1,0,0,0,0
 Seaports,Residential,1,0,0,0,0
 Seaports,Industry & commerce,1,0,0,0,0
-Seaports,Recreation areas,1,0,0,0,0
+Seaports,Recreation areas,1,0.2,0,0,0
 Seaports,Forest,1,0,0,0,0
 Airports,Arable land,1,0,0,0,0
-Airports,Permanent crops,1,0,0,0.10000000000000007,0.009999999999999995
+Airports,Permanent crops,1,0,0,0,0
 Airports,Pastures,1,0,0,0,0
 Airports,Agricultural areas,1,0,0,0,0
 Airports,Residential,1,0,0,0,0
@@ -96,14 +96,14 @@ Airports,Industry & commerce,1,0,0,0,0
 Airports,Recreation areas,1,0,0,0,0
 Airports,Forest,1,0,0,0,0
 Mine & dump sites,Arable land,1,0,0,0,0
-Mine & dump sites,Permanent crops,1,9.499999999999982,1.0000000000000007,0.10000000000000007,0.009999999999999995
+Mine & dump sites,Permanent crops,1,0,-0.01,0,0
 Mine & dump sites,Pastures,1,0,0,0,0
-Mine & dump sites,Agricultural areas,1,0,0,0,0.009999999999999995
+Mine & dump sites,Agricultural areas,1,5.999999999999995,1.0000000000000007,0.10000000000000007,0.009999999999999995
 Mine & dump sites,Residential,1,0,0,0,0
 Mine & dump sites,Industry & commerce,1,0,0,0,0
 Mine & dump sites,Recreation areas,1,0,0,0,0
 Mine & dump sites,Forest,1,0,0,0,0
-Fresh water,Arable land,1,-0.4,0,0,0
+Fresh water,Arable land,1,0,0,0,0
 Fresh water,Permanent crops,1,0,0,0,0
 Fresh water,Pastures,1,0,0,0,0
 Fresh water,Agricultural areas,1,0,0,0,0
